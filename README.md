@@ -1,1 +1,1 @@
-# Clock-With-JavaScript
+# Clock With JavaScript
