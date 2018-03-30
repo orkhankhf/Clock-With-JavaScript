@@ -1,0 +1,154 @@
+/* common styles */
+.unset-float{
+	float: unset !important;
+}
+.text-center{
+	text-align: center !important;
+}
+.clear{
+	clear: both;
+}
+/* custom styles */
+@keyframes changeBgColor{
+	10%{
+		background: #274444;
+	}
+}
+.main{
+	width: 800px;
+	margin: 60px auto;
+	position: relative;
+}
+@keyframes changeColors{
+	0%{
+		color: crimson;
+	}
+	10%{
+		color: #b20a2c;
+		background: #274444;
+	}
+	20%{
+		color: #960422;
+	}
+	30%{
+		color: #87021d;
+		background: #1f3a3a;
+	}
+	40%{
+		color: #7a0119;
+	}
+	50%{
+		color: #680115;
+		background: #294f4f;
+	}
+	60%{
+		color: #77051c;
+	}
+	70%{
+		color: #930723;
+		background: #2d5959;
+	}
+	80%{
+		color: #a00826;
+	}
+	90%{
+		color: #960422;
+		background: #397070;
+	}
+	100%{
+		color: #b20a2c;
+		background: darkslategrey;
+	}
+}
+.clock{
+	width: 600px;
+	height: 600px;
+	background: darkslategrey;
+	border-radius: 50%;
+	margin: 0 auto;
+	font-weight: bold;
+	font-size: 35px;
+	color: crimson;
+	padding: 10px;
+	animation: changeColors 1.5s infinite;
+	animation-timing-function: ease-in-out;
+}
+/* numbers */
+.clock .row{
+	display: block;
+	overflow: hidden;
+	height: 30px;
+	margin: 0 auto;
+}
+.clock .row p:first-child{
+	float: left;
+}
+.clock .row p:last-child{
+	float: right;
+}
+.clock .row:nth-child(2){
+	width: 49%;
+    margin-top: 0.5px;
+}
+.clock .row:nth-child(3){
+	width: 85%;
+    margin-top: 66.5px;
+}
+.clock .row:nth-child(4){
+	width: 100%;
+    margin-top: 112px;
+}
+.clock .row:nth-child(5){
+	width: 88%;
+    margin-top: 121px;
+}
+.clock .row:nth-child(6){
+	width: 54%;
+    margin-top: 75px;
+}
+.clock .row:nth-child(7){
+    margin-top: 20px;
+}
+/* arrows */
+.second-hand{
+    width: 5px;
+    height: 227px;
+    background: cadetblue;
+    position: absolute;
+    top: 70px;
+    left: calc(50% - 2.5px);
+    transform-origin: bottom center;
+}
+.minute-hand{
+	width: 5px;
+    height: 190px;
+    background: darkblue;
+    position: absolute;
+    top: 110px;
+    left: calc(50% - 2.5px);
+    transform-origin: bottom center;
+}
+.hour-hand{
+	width: 5px;
+    height: 120px;
+    background: darkcyan;
+    position: absolute;
+    top: 174px;
+    left: calc(50% - 2.5px);
+    transform-origin: bottom center;
+}
+/* spiral img */
+@keyframes turnSpin{
+	0%{
+		transform: rotate(-360deg);
+	}
+}
+.clock img{
+	position: absolute;
+    top: 246px;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    animation: turnSpin 1s infinite;
+    animation-timing-function: linear;
+}
